@@ -21,6 +21,10 @@
 		C9E273651EE1FAA100C17A0A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E273641EE1FAA100C17A0A /* InterfaceController.swift */; };
 		C9E273671EE1FAA100C17A0A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E273661EE1FAA100C17A0A /* ExtensionDelegate.swift */; };
 		C9E273691EE1FAA100C17A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E273681EE1FAA100C17A0A /* Assets.xcassets */; };
+		C9E273811EE1FAA700C17A0A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E273801EE1FAA700C17A0A /* HealthKit.framework */; };
+		C9E273841EE1FAAD00C17A0A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E273831EE1FAAD00C17A0A /* HealthKit.framework */; };
+		C9E273871EE1FAFB00C17A0A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E273861EE1FAFB00C17A0A /* HealthKitManager.swift */; };
+		C9E273881EE1FAFB00C17A0A /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E273861EE1FAFB00C17A0A /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +106,11 @@
 		C9E273661EE1FAA100C17A0A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		C9E273681EE1FAA100C17A0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9E2736A1EE1FAA100C17A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E2737E1EE1FAA700C17A0A /* HealtRate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealtRate.entitlements; sourceTree = "<group>"; };
+		C9E273801EE1FAA700C17A0A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C9E273821EE1FAAD00C17A0A /* HealtRate WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HealtRate WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		C9E273831EE1FAAD00C17A0A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		C9E273861EE1FAFB00C17A0A /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E273811EE1FAA700C17A0A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E273841EE1FAAD00C17A0A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,12 +150,14 @@
 		C9E2731F1EE1FAA100C17A0A = {
 			isa = PBXGroup;
 			children = (
+				C9E273851EE1FAE600C17A0A /* Shared */,
 				C9E2732A1EE1FAA100C17A0A /* HealtRate */,
 				C9E2733F1EE1FAA100C17A0A /* HealtRateTests */,
 				C9E2734A1EE1FAA100C17A0A /* HealtRateUITests */,
 				C9E273541EE1FAA100C17A0A /* HealtRate WatchKit App */,
 				C9E273631EE1FAA100C17A0A /* HealtRate WatchKit Extension */,
 				C9E273291EE1FAA100C17A0A /* Products */,
+				C9E2737F1EE1FAA700C17A0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +176,7 @@
 		C9E2732A1EE1FAA100C17A0A /* HealtRate */ = {
 			isa = PBXGroup;
 			children = (
+				C9E2737E1EE1FAA700C17A0A /* HealtRate.entitlements */,
 				C9E2732B1EE1FAA100C17A0A /* AppDelegate.swift */,
 				C9E2732D1EE1FAA100C17A0A /* ViewController.swift */,
 				C9E2732F1EE1FAA100C17A0A /* Main.storyboard */,
@@ -204,12 +218,30 @@
 		C9E273631EE1FAA100C17A0A /* HealtRate WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C9E273821EE1FAAD00C17A0A /* HealtRate WatchKit Extension.entitlements */,
 				C9E273641EE1FAA100C17A0A /* InterfaceController.swift */,
 				C9E273661EE1FAA100C17A0A /* ExtensionDelegate.swift */,
 				C9E273681EE1FAA100C17A0A /* Assets.xcassets */,
 				C9E2736A1EE1FAA100C17A0A /* Info.plist */,
 			);
 			path = "HealtRate WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C9E2737F1EE1FAA700C17A0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9E273831EE1FAAD00C17A0A /* HealthKit.framework */,
+				C9E273801EE1FAA700C17A0A /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9E273851EE1FAE600C17A0A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C9E273861EE1FAFB00C17A0A /* HealthKitManager.swift */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +350,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MVFU2L7FRK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					C9E2733B1EE1FAA100C17A0A = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -340,6 +377,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = MVFU2L7FRK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -416,6 +458,7 @@
 			files = (
 				C9E2732E1EE1FAA100C17A0A /* ViewController.swift in Sources */,
 				C9E2732C1EE1FAA100C17A0A /* AppDelegate.swift in Sources */,
+				C9E273871EE1FAFB00C17A0A /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +484,7 @@
 			files = (
 				C9E273671EE1FAA100C17A0A /* ExtensionDelegate.swift in Sources */,
 				C9E273651EE1FAA100C17A0A /* InterfaceController.swift in Sources */,
+				C9E273881EE1FAFB00C17A0A /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HealtRate WatchKit Extension/HealtRate WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = MVFU2L7FRK;
 				INFOPLIST_FILE = "HealtRate WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -611,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HealtRate WatchKit Extension/HealtRate WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = MVFU2L7FRK;
 				INFOPLIST_FILE = "HealtRate WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -664,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealtRate/HealtRate.entitlements;
 				DEVELOPMENT_TEAM = MVFU2L7FRK;
 				INFOPLIST_FILE = HealtRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -677,6 +724,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealtRate/HealtRate.entitlements;
 				DEVELOPMENT_TEAM = MVFU2L7FRK;
 				INFOPLIST_FILE = HealtRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
